@@ -1,16 +1,33 @@
-# This is a sample Python script.
+def add (x, y):
+    return x + y
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+def subtract (x, y):
+    return x - y
 
+def multiply (x, y):
+    return x * y
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hello, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def divide (x, y):
+    if y == 0:
+        return "Ошибка. Деление на ноль недопустимо."
+    return x / y
 
+print("Доступные операции:")
+print("1 - Сложение")
+print("2 - Вычитание")
+print("3 - Умножение")
+print("4 - Деление")
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('There')
+user_choice = input("Пожалуйста, введите номер необходимой операции: ")
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+num1 = int(input("Введите первое число: "))
+num2 = int(input("Введите второе число: "))
+
+if user_choice == "1":
+    print(f"{num1} + {num2} = {add(num1,num2)}")
+elif user_choice == "2":
+    print(f"{num1} - {num2} = {subtract(num1, num2)}")
+elif user_choice == "3":
+    print(f"{num1} * {num2} = {multiply(num1, num2)}")
+elif user_choice == "4":
+    print(f"{num1} / {num2} = {divide(num1, num2)}")
